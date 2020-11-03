@@ -19,3 +19,31 @@ header.appendChild(img);
 let profileHeader = document.createElement("h1");
 profileHeader.innerText = users.users[0].firstName + " " + users.users[0].lastName;
 header.appendChild(profileHeader);
+
+let body = document.querySelector("#body");
+Object.keys(users.users[0].experiences).forEach(key => {
+        let experience = users.users[0].experiences[key];
+
+        let company = document.createElement("h3");
+        company.innerText = experience.company;
+        company.class = "company";
+
+        let title = document.createElement("p");
+        title.innerText = experience.title;
+        title.class = "title";
+
+        let location = document.createElement("p");
+        location.innerText = experience.location;
+        location.class = "location";
+
+        let startDate = experience.startDate;
+        let endDate = experience.endDate;
+        let date = document.createElement("p");
+        date.innerText = startDate + " - " + endDate;
+        date.class = "date";
+
+        body.append(company);
+        body.append(location);
+        body.append(title);
+        body.append(date);
+      });
