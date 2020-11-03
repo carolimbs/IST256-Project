@@ -47,3 +47,16 @@ Object.keys(users.users[0].experiences).forEach(key => {
         body.append(title);
         body.append(date);
       });
+
+let skills = document.createElement("h4");
+skills.innerText = "Skills";
+skills.class = "skills";
+body.append(skills);
+
+let skillsList = document.createElement("ul");
+for(let i = 0; i < users.users[0].skills.length; i++) {
+        let skill = document.createElement("li");
+        skill.innerText = users.users[0].skills[i];
+        skillsList.appendChild(skill);
+}
+body.append(skillsList);
