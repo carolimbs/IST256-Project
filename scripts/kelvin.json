@@ -20,7 +20,8 @@
                     "endDate": "Present"
                 }
             },
-            "skills": [ "Java", "Linux", "HTML", "CSS", "JavaScript"]
+            "skills": [ "Java", "Linux", "HTML", "CSS", "JavaScript"],
+            "profilePic": "./images/kelvin_profile.jpg"
         }
     ]
 }
