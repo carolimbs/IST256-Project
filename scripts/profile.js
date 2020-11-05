@@ -1,3 +1,4 @@
+//json - am unsure as to how to read the json file at the moment
 var usersJSON = '{ "users": [' +
             '{ "firstName": "Kelvin", "lastName": "Trang", "major": "Human-Centered Design & Development",' +
             '"experiences": { "experience1": { "company": "Hughes Network Systems", "title": "Network Security Intern",' +
@@ -9,6 +10,7 @@ var usersJSON = '{ "users": [' +
 let users = JSON.parse(usersJSON);
 let header = document.querySelector("#header");
 
+//profile picture
 let img = document.createElement("img");
 img.src = users.users[0].profilePic;
 img.alt = users.users[0].firstName + "'s Profile Picture";
@@ -16,10 +18,12 @@ img.width = 200;
 img.height = 200;
 header.appendChild(img);
 
+//name of user
 let profileHeader = document.createElement("h1");
 profileHeader.innerText = users.users[0].firstName + " " + users.users[0].lastName;
 header.appendChild(profileHeader);
 
+//experiences
 let body = document.querySelector("#body");
 Object.keys(users.users[0].experiences).forEach(key => {
         let experience = users.users[0].experiences[key];
@@ -48,6 +52,7 @@ Object.keys(users.users[0].experiences).forEach(key => {
         body.append(date);
       });
 
+//skills
 let skills = document.createElement("h4");
 skills.innerText = "Skills";
 skills.class = "skills";
@@ -60,3 +65,5 @@ for(let i = 0; i < users.users[0].skills.length; i++) {
         skillsList.appendChild(skill);
 }
 body.append(skillsList);
+
+//referenced w3schools and stackoverflow along with the textbook and notes
