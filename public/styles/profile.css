@@ -1,0 +1,34 @@
+body {
+  background-color: lightgray;
+}
+
+#header {
+    padding: 120px;
+    text-align: center;
+    background: lightskyblue;
+    color: white;
+    font-size: 30px;
+  }
+
+div > img {
+  height: 200px;
+  width: 200px;
+  float: left;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+}
+
+div > h1 {
+  position: absolute;
+  left: 17%;
+  top: -3.75%;
+}
+
+.company, .title {
+  float: left;
+}
+
+.location, .date {
+  float: right;
+}
