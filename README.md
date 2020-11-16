@@ -1,12 +1,8 @@
 # IST256-Project
 
 Instructions:
-npm init
-npm install express -g
-npx express-generator --no-view
-npm install
--mac: DEBUG=express=app:* npm start yeah?? 
--windows: SET DEBUG=express-app:* <return>npm start)
+npm start
+heroku open
 
 Our application consists of the following:
 -A Homepage
