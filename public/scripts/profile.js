@@ -25,6 +25,9 @@ header.appendChild(profileHeader);
 
 //experiences
 let body = document.querySelector("#body");
+let xpHeader = document.createElement("h2");
+xpHeader.innerText = "Experiences";
+body.append(xpHeader);
 Object.keys(users.users[0].experiences).forEach(key => {
         let experience = users.users[0].experiences[key];
 
