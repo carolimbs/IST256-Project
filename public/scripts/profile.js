@@ -8,7 +8,7 @@ var usersJSON = '{ "users": [' +
             '"skills": [ "Java", "Linux", "HTML", "CSS", "JavaScript"], "profilePic": "./images/kelvin_profile.jpg" } ] }';
 
 let users = JSON.parse(usersJSON);
-let header = document.querySelector("#header");
+let header = $("#header");
 
 //profile picture
 let img = document.createElement("img");
@@ -16,15 +16,15 @@ img.src = users.users[0].profilePic;
 img.alt = users.users[0].firstName + "'s Profile Picture";
 img.width = 200;
 img.height = 200;
-header.appendChild(img);
+header.append(img);
 
 //name of user
 let profileHeader = document.createElement("h1");
 profileHeader.innerText = users.users[0].firstName + " " + users.users[0].lastName;
-header.appendChild(profileHeader);
+header.append(profileHeader);
 
 //experiences
-let body = document.querySelector("#body");
+let body = $("#body");
 let xpHeader = document.createElement("h2");
 xpHeader.innerText = "Experiences";
 body.append(xpHeader);
